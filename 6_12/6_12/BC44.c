@@ -5,9 +5,11 @@
 //针对每行输入，输出该数是奇数（Odd）还是偶数（Even）。
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-int main() {
+int main() 
+{
     int a;
-    while (scanf("%d", &a) != EOF) { // 注意 while 处理多个 case
+    while (scanf("%d", &a) != EOF)
+    { 
         if(a%2!=0)
             printf("Odd\n");
         else

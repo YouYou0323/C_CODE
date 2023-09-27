@@ -20,3 +20,26 @@
 //	}
 //	return 0;
 //}
+
+//修改作业：为满足多组输入的条件（接收一个数据判断一下、再接收一个数据判断一下...）
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//int main()
+//{
+//	int a;
+//	//scanf 函数是输入函数
+//	//函数的返回值是：
+//	//1.如果读取成功，返回的是十几度絮叨的数据的个数
+//	//2.如果读取失败，返回的是EOF,EOF的值是-1
+//	while(scanf("%d",&a) != EOF){
+//		if (a >= 140)
+//		{
+//			printf("Genius\n");
+//		}
+//	}
+//	if (a >= 140)
+//	{
+//		printf("Genius");
+//	}
+//	return 0;
+//}
