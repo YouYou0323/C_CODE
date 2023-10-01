@@ -9,15 +9,16 @@
 //输出：
 //A is an alphabet.
 //6 is not an alphabet.
-//#define _CRT_SECURE_NO_WARNINGS 1
-//#include<stdio.h>
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
 //int main()
 //{
 //	char a;
 //	while (scanf("%c", &a) != EOF)
 //	{
-//		if (a != '\n') {
-//			if (a >= 'A' && a <= 'z')
+//		if (a != '\n') 
+//		{
+//			if (a >= 'A' && a <= 'z')//由于'Z'与'a'中还有一些字符 所以不够严谨
 //				printf("%c is an alphabet\n", a);
 //			else
 //				printf("%c is not an alphabet\n", a);
@@ -25,4 +26,24 @@
 //		
 //	}
 //	return 0;
-}
+//}
+
+//修改：
+//int main()
+//{
+//	char a;
+//	while (scanf("%c", &a) != EOF)
+//	{
+//		if (a != '\n') 
+//		{
+//			if (a >= 'A' && a <= 'Z'|| a>'a' && a<'z')
+//			//或者直接调用库函数isalpha()
+//			//if(isalpha(a))
+//				printf("%c is an alphabet\n", a);
+//			else
+//				printf("%c is not an alphabet\n", a);
+//		}
+//	}
+//	return 0;
+//}
+
