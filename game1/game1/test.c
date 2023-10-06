@@ -8,14 +8,51 @@ void meun()
 	printf("******0.exit ******\n");
 	printf("*******************\n");
 }
+void game()
+{
+	int ret ;
+	char board[ROW][COL];
+	//初始化棋盘中的元素
+	init_board(board,ROW,COL);
+	//展示棋盘
+	Dispaly_board(board, ROW, COL);
+	//下棋
+	while (1)
+	{
+		player(board, ROW, COL);
+		Dispaly_board(board, ROW, COL);
+		ret = is_win(board, ROW, COL);
+		if (ret != 'c')
+		{
+			break;
+		}
+		computer_player(board, ROW, COL);
+		Dispaly_board(board, ROW, COL);
+		ret = is_win(board, ROW, COL);
+		if (ret != 'c')
+		{
+			break;
+		}	
+	}
+	if (ret == '*')
+	{
+		printf("玩家赢！\n");
+	}
+	else if (ret == '#')
+	{
+		printf("电脑赢！\n");
+	}
+	else
+	{
+		printf("平局！\n");
+	}
+}
 int main()
 {
-	int input;
-	char board[ROW][COL];
+	int input=0;
+	srand((unsigned int)time(NULL));
 	do
 	{
-		int x = (unsigned int)time(NULL) % ROW;
-		int y = ((unsigned int)time(NULL)+1) % COL;
 		meun();
 		printf("请选择：>");
 		scanf("%d", &input);
@@ -26,9 +63,7 @@ int main()
 			break;
 		case 1:
 			printf("开始游戏\n");
-			init_board(board, ROW, COL);
-			generator_board(board, ROW, COL);
-			game(board,x,y);
+			game();
 			break;
 		default:
 			printf("选择错误，请重新选择！");
