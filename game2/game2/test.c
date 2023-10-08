@@ -12,12 +12,19 @@ game()
 {
 	printf("ÓÎÏ·¿ªÊ¼£¡\n");
 	char mine_board[ROWS][COLS];
-	char dispaly_board[ROWS][COLS];
-	Init_board(mine_board, ROW, COL,'0');
-	Init_board(dispaly_board, ROW, COL,'*');
+	char show_board[ROWS][COLS];
+	Init_board(mine_board, ROWS, COLS,'0');
+	Init_board(show_board, ROWS, COLS,'*');
+	//Display_board(mine_board, ROW, COL);
+	Display_board(show_board, ROW, COL);
+	Set_Mine(mine_board, ROW, COL);
+	Display_board(mine_board, ROW, COL);
+	find_mine(mine_board, show_board, ROW, COL);
+	
 }
 int main()
 {
+	srand((unsigned int)time(NULL));
 	int input = 0;
 	do
 	{
