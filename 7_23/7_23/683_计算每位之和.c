@@ -6,9 +6,10 @@
 //int DigitSum(int n)
 //{
 //	if (n > 9)
-//		return (n%10)+DigitSum(n / 10);
+//		return (n % 10) + DigitSum(n / 10);
 //	else
-//		return n%10;
+//		//ĞŞ¸Ä return n%10;
+//		return n;
 //}
 //int main()
 //{
