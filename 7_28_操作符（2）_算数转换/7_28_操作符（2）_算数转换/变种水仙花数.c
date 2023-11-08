@@ -9,23 +9,26 @@
 //求出 5位数中的所有 Lily Number。
 //输出描述：
 //一行，5位数中的所有 Lily Number，每两个数之间间隔一个空格。
-#include<stdio.h>
-int main()
-{
-	int i = 0;
-	//遍历所有五位数
-	for (i = 10000; i <= 99999; i++)
-	{
-		//判断Lily Number
-		int j = 0;
-		int sum = 0;
-		int temp = i;
-		for (j = 10; j <= 10000; j = j * 10)
-		{
-			sum += (temp / j) * (temp % j);
-		}
-		if (sum == i)
-			printf("%d ", i);
-	}
-	return 0;
-}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	//遍历所有五位数
+//	for (i = 10000; i <= 99999; i++)
+//	{
+//		//判断Lily Number
+//		int j = 0;
+//		int sum = 0;
+//		int temp = i;
+//		for (j = 10; j <= 10000; j = j * 10)
+//		{
+//			sum += (temp / j) * (temp % j);
+//		}
+//		if (sum == i)
+//			printf("%d ", i);
+//	}
+//	return 0;
+//}
