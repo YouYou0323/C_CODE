@@ -1,12 +1,26 @@
 //#define _CRT_SECURE_NO_WARNINGS 1
 //#include<stdio.h>
-//int my_strlen(const char* p)
+//#include<assert.h>
+////int my_strlen(const char* p)
+////{
+////	int count = 0;
+////	assert(p!=NULL);
+////	while (*p != '\0')
+////	{
+////		p++;
+////		count++;
+////	}
+////	return count;
+////}
+////修改
+//size_t my_strlen(const char* p)
 //{
-//	int count = 0;
-//	while (*p != '\0')
+//	assert(p);
+//	size_t count = 0;
+//	while (*p )
 //	{
-//		p++;
 //		count++;
+//		p++;
 //	}
 //	return count;
 //}
@@ -14,6 +28,6 @@
 //int main()
 //{
 //	char s[] = "123456";
-//	printf("字符串长度：%d", my_strlen(s));
+//	printf("字符串长度：%zd", my_strlen(s));
 //	return 0;
 //}
